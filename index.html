@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODSPACE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html"><img src="images/Screen Shot 2022-10-13 at 19.10.43.png" class="logo" height="90px"
+                    width="auto"></a>
+            <ul>
+                <li>Notifications</li>
+                <li>Inbox</li>
+                <li>Discover</li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="images/loupe.png" height="20px" width="auto">
+                <input type="text" placeholder="search">
+            </div>
+            <div class="nav-user-icon ">
+                <li><a href="profile.html">Profile</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- main content -->
+        <div class="main-content">
+            <div class="story-gallery">
+                <div class="story">
+                    <img src="images/upload.png" alt="" height="40px" width="auto">
+                    <p>Post Story</p>
+                </div>
+            </div>
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="images/download20220501205526.png" alt="">
+                    <div>
+                        <p>example user</p>
+                        <small>public <i class="fas fa-caret-down"></i></small>
+                    </div>
+                </div>
+                <!-- this is the part that I cant get to work -->
+                <div class="post-input-container">
+                    <form>
+                        <input type="text" name="" id="text-to-post">
+                        <input type="button" id="btn" value="post"
+                            onclick="displayFormContents(this.form);return false">
+                    </form>
+
+                    <script>
+                        function displayFormContents(someForm) {
+                            var out = '';
+                        }
+                        document.getElementById("help").innerHTML = out;
+                    </script>
+
+                    <script>
+                        function displayFormContents(someForm) {
+                            const btn = document.getElementById('btn');
+
+                            btn.addEventListener('click', () => {
+                                const form = document.getElementById('form');
+
+                                if (form.style.visibility === 'hidden') {
+                                    // 👇️ this SHOWS the form
+                                    form.style.visibility = 'visible';
+                                } else {
+                                    // 👇️ this HIDES the form
+                                    form.style.visibility = 'hidden';
+                                }
+                            });
+
+                            var out = '';
+                            out = "This is really an amazing cake!"
+                            //el = someForm.elements
+                            //out = el.name;
+                            document.getElementById("help").innerHTML = out;
+                        }
+
+                    </script>
+                </div>
+            </div>
+
+            <!-- <div class="post-container" id="form">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/download20220501205526.png" alt="">
+                        <div>
+                            <p>example user</p>
+                            <span>October 18 2022, 16:25 pm</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="post-text" id="help">Test!</a></p>
+            </div> -->
+
+            <div class="post-container" id="form">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/download20220501205526.png" alt="">
+                        <div>
+                            <p>example user</p>
+                            <span>October 13 2022, 20:25 pm</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="post-text" id="help">Wow! Look at this amazing cake <a href="#">#yummy</a> <a
+                        href="#">#food</a></p>
+                <img src="images/cake.jpeg" class="post-img">
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/download20220502132342.png" alt="">
+                        <div>
+                            <p>example user 2</p>
+                            <span>October 10 2022, 15:34 pm</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="post-text">I love food <a href="#">#tasty</a> <a href="#">#culture</a></p>
+                <img src="images/Eq_it-na_pizza-margherita_sep2005_sml.jpeg" class="post-img">
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="images/download20220501205526.png" alt="">
+                        <div>
+                            <p>example user</p>
+                            <span>October 13 2022, 20:25 pm</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="post-text" id="help">I love biryani! <a href="#">#indian food</a></p>
+                <img src="images/Screen Shot 2022-10-18 at 10.33.56.png" class="post-img">
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
